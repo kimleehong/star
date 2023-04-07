@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>넥슨 모작 | 가시안이며 비상업적 용도로 사용되어집니다.</title>
+
+  <!-- 제이쿼리&테일윈드&폰트어썸 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- 로컬링크 -->
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+
+</head>
+
+<body>
+  <div class="con flex">
+    <header class="top-header flex whitespace-nowrap">
+      <div class="top-header__left-menu flex-1 flex justify-start">
+        <div class="flex h-full items-center openbtn cursor-pointer" onclick="openNav()">
+          <span><i class="fas fa-bars"></i></span>
+          <span>메뉴</span>
+        </div>
+      </div>
+      <a href="" class="self-center">
+        <img src="https://rs.nxfs.nexon.com/gnb/images/logo_nexon.png" alt="">
+      </a>
+      <div class="top-header__right-menu flex-1 flex justify-end">
+        <div class="pcroom flex items-center h-full">
+          <span>PC방</span>
+          <span class="pc-off"><sup>OFF</sup></span>
+        </div>
+        <div class="join"><a href="#" class="flex h-full items-center">회원가입</a></div>
+        <div class="login self-center"><a href="#">로그인</a></div>
+      </div>
+    </header>
+    <div class="panel-bg" id="panel-bg" onclick="closeNav()"></div>
+    <div id="mySidepanel" class="side-panel flex flex-col whitespace-nowrap">
+      <div class="side-panel__btn-close px-7 py-5 cursor-pointer closebtn" onclick="closeNav()"><i
+          class="fas fa-times"></i></div>
+      <div class="side-panel__game px-10 overflow-y-auto">
+        <div class="side-panel__tap-games py-7 flex">
+          <a class="self-center tablinks active cursor-pointer" onclick="openTab(event, 'pc-game')">PC 게임</a>
+          <a class="self-center tablinks cursor-pointer" onclick="openTab(event, 'mobile-game')">모바일 게임</a>
+          <div class="flex-grow"></div>
+          <a href="" class="self-center">고객센터</a>
+        </div>
+        <div class="side-panel__game-list flex tabcontent" id="pc-game">
+          <nav class="column">
+            <ul>
+              <li>
+                <span>A~Z</span>
+                <ul>
+                  <li><a href="">EA SPORTS™ FIFA ONLINE 4</a></li>
+                  <li><a href="">V4</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>ㄱ~ㄹ</span>
+                <ul>
+                  <li><a href="">던전앤파이터</a></li>
+                  <li><a href="">드래곤네스트</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>ㅁ~ㅅ</span>
+                <ul>
+                  <li><a href="">마비노기</a></li>
+                  <li><a href="">마비노기영웅전</a></li>
+                  <li><a href="">메이플스토리</a></li>
+                  <li><a href="">메이플스토리2</a></li>
+                  <li><a href="">바람의나라</a></li>
+                  <li><a href="">버블파이터</a></li>
+                  <li><a href="">사이퍼즈</a></li>
+                  <li><a href="">서든어택</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav class="column">
+            <ul>
+              <li>
+                <span>ㅇ~ㅈ</span>
+                <ul>
+                  <li><a href="">아스가르드</a></li>
+                  <li><a href="">아키에이지</a></li>
+                  <li><a href="">어둠의전설</a></li>
+                  <li><a href="">엘소드</a></li>
+                  <li><a href="">일랜시아</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>ㅊ~ㅋ</span>
+                <ul>
+                  <li><a href="">천애명월도</a></li>
+                  <li><a href="">카운터사이드</a></li>
+                  <li><a href="">카운터스트라이크온라인</a></li>
+                  <li><a href="">카트라이더</a></li>
+                  <li><a href="">카트라이더: 드리프트</a></li>
+                  <li><a href="">커츠펠</a></li>
+                  <li><a href="">크레이지아케이드</a></li>
+                  <li><a href="">클로저스</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>ㅌ~ㅎ</span>
+                <ul>
+                  <li><a href="">테일즈런너</a></li>
+                  <li><a href="">테일즈위버</a></li>
+                  <li><a href="">트리오브세이비어</a></li>
+                  <li><a href="">파이널판타지14</a></li>
+                  <li><a href="">프리스타일2</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="side-panel__game-list tabcontent" id="mobile-game">
+          <nav class="column">
+            <ul>
+              <li>
+                <span>A~Z</span>
+                <ul>
+                  <li><a href="">EA SPORTS™ FIFA Mobile</a></li>
+                  <li><a href="">EA SPORTS™ FIFA ONLINE 4 M</a></li>
+                  <li><a href="">V4</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>ㄱ~ㄹ</span>
+                <ul>
+                  <li><a href="">고질라 디펜스 포스</a></li>
+                  <li><a href="">다크어벤저3</a></li>
+                  <li><a href="">런웨이 스토리</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>ㅁ~ㅅ</span>
+                <ul>
+                  <li><a href="">메이플스토리M</a></li>
+                  <li><a href="">바람의나라: 연</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <nav class="column">
+            <ul>
+              <li>
+                <span>ㅇ~ㅈ</span>
+                <ul>
+                  <li><a href="">액스</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>ㅊ~ㅋ</span>
+                <ul>
+                  <li><a href="">카운터사이드</a></li>
+                  <li><a href="">카트라이더 러쉬플러스</a></li>
+                  <li><a href="">크레이지아케이드 BnB M</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>ㅌ~ㅎ</span>
+                <ul>
+                  <li><a href="">트라하</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="side-panel__menu flex flex-wrap">
+        <div>
+          <a href="#">
+            <span><i class="fas fa-user-circle"></i></span>
+            <span>내정보</span>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span></span>
+            <span>이벤트</span>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span></span>
+            <span>넥슨캐시</span>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span></span>
+            <span>보안센터</span>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span></span>
+            <span>공지사항</span>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span></span>
+            <span>넥슨플러그</span>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span></span>
+            <span>고객센터</span>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span></span>
+            <span>넥슨달력</span>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span></span>
+            <span>넥슨플레이</span>
+          </a>
+        </div>
+      </div>
+      <a href="" class="side-panel__btn-total-service text-center py-5">전체서비스</a>
+    </div>
+    <section class="banner">
+      <div class="banner-img slide">
+        <ul class="panel">
+          <li>
+            <img src="https://rs.nxfs.nexon.com/bannerusr/21/5/BIS127165747286.jpg" alt="">
+            <div class="banner-img__txt">
+              <img src="https://rs.nxfs.nexon.com/bannerusr/21/5/L15q27165747506.png" alt="">
+            </div>
+            <div class="banner__youtube">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/u8_i-jkObFE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </li>
+          <li>
+            <img src="https://rs.nxfs.nexon.com/bannerusr/21/5/Nl4125134437859.jpg" alt="">
+
+          </li>
+        </ul>
+        <div class="banner__game-event">
+          <ul class="flex dot">
+            <li class="on">
+              <a href="#">
+                <div class="game-event__name">카트라이더 러쉬플러스</div>
+                <div class="game-event__event">카러플X배틀그라운드 모바일</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="game-event__name">던전앤파이터</div>
+                <div class="game-event__event">오즈마 레이드 업데이트</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section-1">
+      <div class="section-1__info flex flex-col">
+        <div class="info__title flex">
+          <div class="font-extrabold text-2xl">추천게임</div>
+          <div class="flex-grow"></div>
+          <div>
+            <span>고객센터</span>
+            <span>보안센터</span>
+          </div>
+        </div>
+        <div class="info__gl-box flex flex-grow">
+          <div class="gl-box__game h-full flex">
+            <div class="gl-game__game-box">
+              <div class="game-box__img">
+                <div class="playtalk">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <div class="playtalk-tt flex justify-center items-center">
+                    <span>플레이톡</span>
+                    <span><img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt=""></span>
+                  </div>
+                </div>
+                <div class="bg-gradient"></div>
+                <div class="g-img">
+                  <img src="https://rs.nxfs.nexon.com/gameusr/19/7/SH0J29212201541.png" alt="">
+                </div>
+              </div>
+              <div class="game-box__txt flex flex-col">
+                <div class="txt-recommend">추천</div>
+                <div class="txt-gamename">카트라이더</div>
+                <div class="txt-rectxt flex flex-grow items-end">최근 업데이트된</div>
+              </div>
+            </div>
+            <div class="gl-game__game-box">
+              <div class="game-box__img">
+                <div class="playtalk">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <div class="playtalk-tt flex justify-center items-center">
+                    <span>플레이톡</span>
+                    <span><img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt=""></span>
+                  </div>
+                </div>
+                <div class="bg-gradient"></div>
+                <div class="g-img">
+                  <img src="https://rs.nxfs.nexon.com/gameusr/20/10/jVnf29123146865.png" alt="">
+                </div>
+              </div>
+              <div class="game-box__txt flex flex-col">
+                <div class="txt-recommend">추천</div>
+                <div class="txt-gamename">EA SPORTS™ FIFA ONLINE 4</div>
+                <div class="txt-rectxt flex flex-grow items-end">최근 게이머가 많은</div>
+              </div>
+            </div>
+            <div class="gl-game__game-box">
+              <div class="game-box__img">
+                <div class="playtalk">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <div class="playtalk-tt flex justify-center items-center">
+                    <span>플레이톡</span>
+                    <span><img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt=""></span>
+                  </div>
+                </div>
+                <div class="bg-gradient"></div>
+                <div class="g-img">
+                  <img src="https://rs.nxfs.nexon.com/gameusr/21/2/6uf425101507160.jpg" alt="">
+                </div>
+              </div>
+              <div class="game-box__txt flex flex-col">
+                <div class="txt-recommend">추천</div>
+                <div class="txt-gamename">메이플스토리</div>
+                <div class="txt-rectxt flex flex-grow items-end">최근 게이머가 많은</div>
+              </div>
+            </div>
+            <div class="gl-game__game-box">
+              <div class="game-box__img">
+                <div class="playtalk">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <div class="playtalk-tt flex justify-center items-center">
+                    <span>플레이톡</span>
+                    <span><img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt=""></span>
+                  </div>
+                </div>
+                <div class="bg-gradient"></div>
+                <div class="g-img">
+                  <img src="https://rs.nxfs.nexon.com/gameusr/21/4/DjMU15145316092.png" alt="">
+                </div>
+              </div>
+              <div class="game-box__txt flex flex-col">
+                <div class="txt-recommend">추천</div>
+                <div class="txt-gamename">마비노기영웅전</div>
+                <div class="txt-rectxt flex flex-grow items-end">오랫동안 사랑받는</div>
+              </div>
+            </div>
+            <div class="gl-game__game-box">
+              <div class="game-box__img">
+                <div class="playtalk">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt="">
+                  <div class="playtalk-tt flex justify-center items-center">
+                    <span>플레이톡</span>
+                    <span><img src="https://rs.nxfs.nexon.com/home/images/main/set_playtalk.svg" alt=""></span>
+                  </div>
+                </div>
+                <div class="bg-gradient"></div>
+                <div class="g-img">
+                  <img src="https://rs.nxfs.nexon.com/gameusr/19/7/mdO929175930313.png" alt="">
+                </div>
+              </div>
+              <div class="game-box__txt flex flex-col">
+                <div class="txt-recommend">추천</div>
+                <div class="txt-gamename">마비노기</div>
+                <div class="txt-rectxt flex flex-grow items-end">오래 플레이하는</div>
+              </div>
+            </div>
+          </div>
+          <div class="gl-box__login flex flex-col justify-center">
+            <a href="#" class="login__nexon-login">NEXON ID 로그인</a>
+            <div class="flex">
+              <a href="#" class="login__one-login">일회용 로그인</a>
+              <a href="#" class="login__qr-login">QR 로그인</a>
+            </div>
+            <div class="another_login flex justify-center">
+              <span>다른 계정 간편 로그인</span>
+              <span class="google"><img src="https://rs.nxfs.nexon.com/home/images/main/set_login.png" alt=""></span>
+              <span class="facebook"><img src="https://rs.nxfs.nexon.com/home/images/main/set_login.png" alt=""></span>
+              <span class="naver"><img src="https://rs.nxfs.nexon.com/home/images/main/set_login.png" alt=""></span>
+              <span class="apple"><img src="https://rs.nxfs.nexon.com/home/images/main/set_login.png" alt=""></span>
+            </div>
+            <div class="flex justify-between id-search">
+              <div class="flex">
+                <div>넥슨 ID찾기</div>
+                <div>비밀번호 찾기</div>
+              </div>
+              <div>회원가입</div>
+            </div>
+            <div class="sign-tooltip">
+              <span>지금 넥슨 회원가입하시고 <b>43개 넥슨게임을 무료</b>로 플레이하세요</span>
+              <span style="margin-left:7px;" class="btn-tt-close">X</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-2">
+      <div class="section-2__all-games flex items-center">
+        <div class="gamemenu-name font-extrabold text-2xl">전체게임</div>
+        <div class="ico-game">
+          <span><i class="fas fa-th-large"></i></span><span><i class="fas fa-bars"></i></span>
+        </div>
+        <div class="flex-grow"></div>
+        <div class="search-game">
+          <input type="text" placeholder="게임명 검색"><i class="fas fa-search"></i>
+        </div>
+      </div>
+      <div class="section-2__games-tag flex items-center flex-wrap">
+        <div class="tag"><span class="tag-active">#전체</span></div>
+        <div class="tag"><span>#최근 게이머가 많은 TOP10</span></div>
+        <div class="tag"><span>#오래 플레이하는 TOP10</span></div>
+        <div class="tag"><span>#RPG</span></div>
+        <div class="tag"><span>#액션 RPG</span></div>
+        <div class="tag"><span>#AOS/MOBA</span></div>
+        <div class="tag"><span>#FPS</span></div>
+        <div class="tag"><span>#캐주얼</span></div>
+        <div class="tag"><span>#스포츠</span></div>
+        <div class="tag"><span>#이벤트</span></div>
+        <div class="tag"><span>#업데이트</span></div>
+        <div class="tag"><span>#신규게임</span></div>
+      </div>
+      <div class="section-2__pc-games">
+        <div class="font-extrabold text-xl mb-7" id="go-pcgame">
+          <span>PC게임</span>
+          <a href="#go-mgame">모바일게임</a>
+        </div>
+        <div class="pcgames-list flex flex-wrap">
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/12/vsoy11174835262.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">
+                <span>V4</span>
+                <span class="gico cafe-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="pcgame-txt-2 flex items-center">대장, PC에서 기다릴게요!</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>MMORPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/21/1/2FJh07105826755.jpg" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">메이플스토리</div>
+              <div class="pcgame-txt-2 flex items-center">모험과 재미가 가득한 2D 횡스크롤 MMORPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/10/oxu129123146725.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">
+                <span>EA SPORTS™ FIFA ONLINE 4</span>
+                <span class="gico youtube-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="pcgame-txt-2 flex items-center">축구, 그 이상을 경험할 수 있는 최고의 방법</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>스포츠</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/bannerusr/21/5/IgZo25134438141.jpg" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">던전앤파이터</div>
+              <div class="pcgame-txt-2 flex items-center">혼돈의 오즈마 레이드 업데이트</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>ACTION RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/zihY29180233377.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">서든어택</div>
+              <div class="pcgame-txt-2 flex items-center">대한민국 FPS의 모든 재미</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>FPS</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/QYiB29175929811.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">
+                <span>마비노기</span>
+                <span class="gico twitter-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="pcgame-txt-2 flex items-center">낭만이 넘치는 판타지라이프 세계로 출발!</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/kV4G29180108505.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">바람의나라</div>
+              <div class="pcgame-txt-2 flex items-center">당신의 플레이가 역사가 되는 MMORPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/USh929212201447.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">
+                <span>카트라이더</span>
+                <span class="gico youtube-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="pcgame-txt-2 flex items-center">크레이지레이싱 카트라이더</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>레이싱</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/QF7Z30101730284.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">테일즈위버</div>
+              <div class="pcgame-txt-2 flex items-center">드라마틱 온라인 액션 RPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/21/4/gdqt15145315905.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">마비노기영웅전</div>
+              <div class="pcgame-txt-2 flex items-center">중세 판타지 배경의 3D 액션 RPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>ACTION RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/2/tPZC27095939034.gif" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">
+                <span>엘소드</span>
+                <span class="gico youtube-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="pcgame-txt-2 flex items-center">스타일리쉬 액션 RPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>ACTION RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/21/4/MUR402203727470.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">사이퍼즈</div>
+              <div class="pcgame-txt-2 flex items-center">지금까지 이런 타격감은 없었다!</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>AOS/MOBA</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/21/2/oXjr09114752158.jpg" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">클로저스</div>
+              <div class="pcgame-txt-2 flex items-center">이능력자들이 펼치는 초고속 액션 RPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>ACTION RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/Vyik29212137072.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">천애명월도</div>
+              <div class="pcgame-txt-2 flex items-center">뛰어난 그래픽과 스토리의 대작 무협 RPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/tOkY29180043932.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">메이플스토리2</div>
+              <div class="pcgame-txt-2 flex items-center">우리가 함께 만들어가는 이야기</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/bannerusr/21/5/Fa3g06104502635.jpg" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">
+                <span>카운터스트라이크온라인</span>
+                <span class="gico facebook-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="pcgame-txt-2 flex items-center"><span
+                  style="color:#0077ff; font-weight:bold;">EVENT</span>&nbsp판타지 세계로의 여행</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>FPS</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/5jYW30170336462.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">트리오브세이비어</div>
+              <div class="pcgame-txt-2 flex items-center">80여 종의 클래스와 함께하는 감성 MMORPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/G1M429180300700.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">아스가르드</div>
+              <div class="pcgame-txt-2 flex items-center">선과 악의 대립, 신의 영역에 도전하라!</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/VAdr29212239779.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">크레이지아케이드</div>
+              <div class="pcgame-txt-2 flex items-center">#누구나#쉽게#캐주얼#인싸게임</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>캐주얼</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/3/BpS925143057951.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">어둠의전설</div>
+              <div class="pcgame-txt-2 flex items-center">추억이 가득한 국내 최초 쿼터뷰 RPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/21/4/5ksW02153305470.jpg" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">버블파이터</div>
+              <div class="pcgame-txt-2 flex items-center">물총으로 즐기는 캐주얼 TPS</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>캐주얼</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/qUOI29180520148.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">일랜시아</div>
+              <div class="pcgame-txt-2 flex items-center">동서양이 만난 판타지월드</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/21/4/CZuO26171219349.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">카운터사이드</div>
+              <div class="pcgame-txt-2 flex items-center">하나의 도시, 두 개의 세계</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>수집형 RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/11/Shfs07193208562.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">카트라이더: 드리프트</div>
+              <div class="pcgame-txt-2 flex items-center">카트라이더의 게임성을 새롭게 계승한 레이싱</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>레이싱</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/lWVB29212220115.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">커트펠</div>
+              <div class="pcgame-txt-2 flex items-center">당신의 가슴을 뛰게 할 액션 배틀</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>AOS/MOBA</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/5/8z7U08114212767.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">테일즈런너</div>
+              <div class="pcgame-txt-2 flex items-center">아름다운 동화나라 속 모험</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>캐주얼</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/46Ih29180403943.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">아키에이지</div>
+              <div class="pcgame-txt-2 flex items-center">당신이 만들어가는 최고의 MMORPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/4/FaDz14211009656.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">프리스타일2</div>
+              <div class="pcgame-txt-2 flex items-center">더 화려하고 더 짜릿한 한판 승부</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>스포츠</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/lbrB29175644852.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">드래곤네스트</div>
+              <div class="pcgame-txt-2 flex items-center whitespace-nowrap">세계 최고의 액션을 드래곤네스트에서 즐겨보세요</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>ACTION RPG</span>
+              </div>
+            </div>
+          </div>
+          <div class="pc-gamecard">
+            <div class="pcgame-img">
+              <div class="pcgame-img__bg"></div>
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/8/p7D310191406007.png" alt="">
+            </div>
+            <div class="pcgame-txt flex flex-col">
+              <div class="pcgame-txt-1 flex items-center">파이널판타지14</div>
+              <div class="pcgame-txt-2 flex items-center">최고의 모험을 선사하는 PC MMORPG</div>
+              <div class="pcgame-txt-3 flex items-center">
+                <span class="pc-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png" alt=""></span>
+                <span>RPG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-2__mobile-games" id="go-mgame">
+        <div class="font-extrabold flex text-xl mt-7 mb-4">
+          <span>모바일게임</span>
+          <div class="relative ml-auto all-community">
+            <span class="gico chat-ico">
+              <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+              <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+            </span>
+            <span>커뮤니티 모아보기</span>
+          </div>
+        </div>
+        <div class="mobilegames-list flex flex-wrap">
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/21/3/aNKw11120039105.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>메이플스토리M</span>
+                <span class="gico cafe-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">RPG</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/vxrp02155220964.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>바람의나라:연&nbsp;<span>EVENT</span></span>
+                <span class="gico chat-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">MMORPG</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/4/jZaM03182411854.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>카트라이더 러쉬플러스</span>
+                <span class="gico chat-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">레이싱</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="span-update">UPDATE</span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/12/kIbD15141635493.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>EA SPORTS™ FIFA Mobile</span>
+                <span class="gico chat-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">스포츠</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="span-update">UPDATE</span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/8/mQVi30152325998.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>V4</span>
+                <span class="gico cafe-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">MMORPG</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/9/deP629143435589.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>카운터사이드</span>
+                <span class="gico chat-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">수집형 RPG</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/y2Im30155321975.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>고질라 디펜스 포스</span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">전략</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/21/4/LOE002152555758.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>트라하</span>
+                <span class="gico cafe-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">MMORPG</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/6FkO30170821680.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>크레이지아케이드 BNB M</span>
+                <span class="gico cafe-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">캐주얼</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/9UbT30155148763.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>런웨이 스토리</span>
+                <span class="gico facebook-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">캐주얼</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/20/10/TJF129123105036.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>EA SPORTS™ FIFA ONLINE 4 M</span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">스포츠</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/U20X30154927263.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>액스</span>
+                <span class="gico cafe-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">MMORPG</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-gamecard flex items-center">
+            <div class="mobilegame-img">
+              <img src="https://rs.nxfs.nexon.com/gameusr/19/7/caze30154759280.png" alt="">
+            </div>
+            <div class="mobilegame-txt flex flex-col">
+              <div class="mobilegame-txt-1 flex items-center">
+                <span>다크어벤저3</span>
+                <span class="gico cafe-ico">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                  <img src="https://rs.nxfs.nexon.com/home/images/main/set_community.svg" alt="">
+                </span>
+              </div>
+              <div class="mobilegame-txt-2 flex items-center">ACTIONRPG</div>
+              <div class="mobilegame-txt-3 flex items-center">
+                <span class="apple-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+                <span class="appstore-ico"><img src="https://rs.nxfs.nexon.com/home/images/main/set_device.png"
+                    alt=""></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-mobilemore justify-center items-center">더보기</div>
+      </div>
+    </section>
+    <div class="footer">
+      <div class="footer-1 flex items-center justify-between">
+        <div>
+          <p>[공지] 6/3(목) 넥슨 정기점검 안내</p>
+        </div>
+        <div class="footer-1__icon flex">
+          <div class="footer-ico-youtube">
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_footer.png" alt="">
+          </div>
+          <div class="footer-ico-twitter">
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_footer.png" alt="">
+          </div>
+          <div class="footer-ico-facebook">
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_footer.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="footer-2 flex items-center justify-between">
+        <div class="footer-2__services">
+          <div>
+            <span>이용약관</span><span>개인정보처리방침</span><span>청소년보호정책</span><span>게임IP사용가이드</span><span>게임시간선택제</span><span>고객센터</span><span>전체서비스</span>
+          </div>
+          <div>
+            <span>회사소개</span><span>채용안내</span><span>윤리경영</span><span>LEVEL UP(넥슨폰트)</span><span>광고문의</span><span>넥슨
+              PC방</span>
+          </div>
+        </div>
+        <div class="footer-2__world">
+          <ul class="foreign">
+            <li>GLOBAL</li>
+            <li>THAILAND</li>
+            <li>TAIWAN</li>
+            <li>KOREA</li>
+            <li>JAPAN</li>
+          </ul>
+          <div class="flex justify-between items-center h-full">
+            <div>KOREA</div>
+            <div class="footer-ico-world">
+              <img src="https://rs.nxfs.nexon.com/home/images/main/set_footer.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-3 flex flex-col justify-center">
+        <p>㈜넥슨코리아 대표이사 이정헌 경기도 성남시 분당구 판교로 256번길 7 전화 : 1588-7701 팩스 : 0502-258-8322</p>
+        <p>E-mail : contact-us@nexon.co.kr 사업자등록번호 : 220-87-17483호 통신판매업 신고번호 : 제2013-경기성남-1659호 <u
+            class="cursor-pointer">사업자정보확인</u></p>
+        <p>© NEXON Korea Corporation All Rights Reserved.</p>
+      </div>
+      <div class="footer-4 flex">
+        <div class="footer-ico-nexon">
+          <img src="https://rs.nxfs.nexon.com/home/images/main/set_footer.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="float-menu">
+
+      <!-- big size -->
+      <div class="float-menu__youtube">
+        <div class="youtube-img">
+          <img
+            src="https://i.ytimg.com/vi/RsCThieWF38/hq720.jpg?sqp=-oaymwEZCK4FEIIDSEbyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLC5NSk920N1da5gXdUQMjt5lLo"
+            alt="">
+        </div>
+        <div class="youtube-content">
+          <div class="ncc-title flex justify-between">
+            <div>
+              <span>NCC</span>
+              <span>βeta</span>
+            </div>
+            <div class="youtube-content__mini">최소화</div>
+          </div>
+          <div class="media-title">게임하기 전에 보고가세요. # 웃긴</div>
+          <div class="media-story">「핵 X 막자 X 빌리지 손가락 3층 올라가보기 실험했습니다ㅋㅋㅋ」 [카트 문호준]</div>
+          <div class="media-another flex h-full">다른영상보기</div>
+        </div>
+      </div>
+
+      <!-- small size -->
+      <div class="float-mini">
+        <div class="float-mini__youtube">
+          <div class="mini__youtube-img">
+            <img
+              src="https://i.ytimg.com/vi/RsCThieWF38/hq720.jpg?sqp=-oaymwEZCK4FEIIDSEbyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLC5NSk920N1da5gXdUQMjt5lLo"
+              alt="">
+          </div>
+          <div class="mini__youtube-txt mini-ico flex items-center h-full">
+            <div>
+              <img src="https://rs.nxfs.nexon.com/home/images/main/set_floating.png" alt="">
+            </div>
+            <span>추천동영상</span>
+          </div>
+        </div>
+        <a class="float-mini__pc mini-ico flex items-center h-full" href="#go-pcgame">
+          <div>
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_floating.png" alt="">
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_floating.png" alt="">
+          </div>
+          <span>PC게임</span>
+        </a>
+        <a class="float-mini__mobile mini-ico flex items-center h-full" href="#go-mgame">
+          <div>
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_floating.png" alt="">
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_floating.png" alt="">
+          </div>
+          <span>모바일게임</span>
+        </a>
+        <div class="float-mini__top mini-ico flex items-center h-full" onclick="$(window).scrollTop(0);">
+          <div>
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_floating.png" alt="">
+            <img src="https://rs.nxfs.nexon.com/home/images/main/set_floating.png" alt="">
+          </div>
+          <span>TOP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
